@@ -21,6 +21,7 @@
 #--------------------------------------------------------------------
 
 # app.baseURL = ''
+# api.baseURL = ''
 # If you have trouble with `.`, you could also use `_`.
 # app_baseURL = ''
 # app.forceGlobalSecureRequests = false
@@ -34,9 +35,10 @@
 # database.default.database = ci4
 # database.default.username = root
 # database.default.password = root
-# database.default.DBDriver = MySQLi
+# database.default.DBDriver = PostgreSQL
 # database.default.DBPrefix =
-# database.default.port = 3306
+# database.default.port = 5432
+
 
 # If you use MySQLi as tests, first update the values of Config\Database::$tests.
 # database.tests.hostname = localhost
@@ -67,3 +69,16 @@
 #--------------------------------------------------------------------
 
 # logger.threshold = 4
+
+#--------------------------------------------------------------------
+# EMAIL
+#--------------------------------------------------------------------
+
+# email.protocol = smtp
+# email.SMTPHost = smtp.example.com
+# email.SMTPPort = 587
+# email.SMTPUser = your_email@example.com
+# email.SMTPPass = your_email_password
+# email.SMTPCrypto = tls
+# email.mailType = html
+# email.charset = utf-8
