@@ -34,8 +34,8 @@ class Database extends Config
         'DBPrefix'     => '',
         'pConnect'     => false,
         'DBDebug'      => true,
-        'charset'      => 'utf8mb4',
-        'DBCollat'     => 'utf8mb4_general_ci',
+        'charset'      => 'utf8',
+        'DBCollat'     => 'utf8_general_ci',
         'swapPre'      => '',
         'encrypt'      => false,
         'compress'     => false,
@@ -198,6 +198,13 @@ class Database extends Config
         // we don't overwrite live data on accident.
         if (ENVIRONMENT === 'testing') {
             $this->defaultGroup = 'tests';
+        } else {
+            $this->default['hostname'] = getenv('database.default.hostname');
+            $this->default['database'] = getenv('database.default.database');
+            $this->default['username'] = getenv('database.default.username');
+            $this->default['password'] = getenv('database.default.password');
+            $this->default['DBDriver'] = getenv('database.default.DBDriver');
+            $this->default['port'] = getenv('database.default.port');
         }
     }
 }
