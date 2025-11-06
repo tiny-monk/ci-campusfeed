@@ -1,0 +1,66 @@
+{
+  "info": {
+    "name": "CampusFeed API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/api/health",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "health"
+          ]
+        }
+      }
+    },
+    {
+      "name": "API Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/api/api_check",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "api_check"
+          ]
+        }
+      }
+    },
+    {
+      "name": "DB Connection Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/api/api_check/checkDbConnection",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "api_check",
+            "checkDbConnection"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseURL",
+      "value": "http://localhost"
+    }
+  ]
+}
